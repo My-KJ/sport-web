@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    margin: 0;
+    padding: 0;
+}
+
+.container-table {
+    display: flex;
+    justify-content: center; /* จัดให้อยู่กึ่งกลางตามแนวนอน */
+    align-items: center; /* จัดให้อยู่กึ่งกลางตามแนวตั้ง */
+    height: 100vh; /* ความสูงเต็มหน้าจอ */
+}
+
+/* เพิ่มความกว้างสำหรับการจัดตารางให้กว้างพอดี */
+#table_id {
+    width: 80%;
+}
+
+
+/* กำหนดลักษณะของปุ่ม */
+ .toggle-button {
+    background-color: #4CAF50; /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    padding: 10px 20px; /* ขนาดของปุ่ม */
+    border: none; /* ไม่มีเส้นขอบ */
+    border-radius: 5px; /* ขอบโค้ง */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นรูปแบบแตะ */
+}
+
+/* ลักษณะของปุ่มเมื่อนำเม้าส์มาวาง */
+.toggle-button:hover {
+    background-color: #45a049; /* สีพื้นหลังเมื่อชี้เข้าไป */
+}
+
+.container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}

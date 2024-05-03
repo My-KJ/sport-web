@@ -1,0 +1,92 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  background-color: #1c1c1c;
+  color: #FFFFFF;
+}
+.navbar-brand {
+  margin-left: 1rem;
+}
+
+.navbar .btn-group{
+  background-color: #6ac077;
+  border: none;
+  text-align: center;
+  align-items: center;
+}
+.btn-group .btn {
+  width: 8.5rem;
+  height: auto;
+}
+
+.container-fluid-main {
+  margin-top: 5.2rem;
+  display: block;
+  flex-wrap: nowrap; /* ป้องกันการขึ้นบรรทัดใหม่ */
+  justify-content: space-between; /* จัดให้อยู่ห่างกันทางด้านของคอลัมน์ */
+  align-items: center;
+}
+
+.row-brand {
+  display: flex;
+  max-width: 100%;
+  width: auto;
+  margin-left: 120px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    margin-left: 47vh;
+  }
+}
+
+.col-md-3 {
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.card {
+  box-shadow: 5px 5px 10px #bbbdbc;
+  max-width: 450px;
+  width: auto;
+  height: auto;
+}
+
+.card-body {
+  display:block;
+}
+
+.btn-card {
+  display: block;
+  justify-content: center;
+  
+
+  a {
+    font-size: 14px;
+  }
+}
+
+  footer {
+    left: 0;
+    width: 100%;
+    background-color: #1c1c1c;
+    color: #FFFFFF;
+    padding: 10px 0;
+    text-align: center;
+  }
+.container-fluid-foot{
+  margin: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.icon a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 13px;
+  text-decoration: none;
+}
+

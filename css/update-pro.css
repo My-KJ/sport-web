@@ -1,0 +1,84 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  background-color: #1c1c1c;
+  color: #FFFFFF;
+}
+.navbar-brand {
+  margin-left: 1rem;
+}
+
+.navbar .btn-group{
+  background-color: #6ac077;
+  border: none;
+  text-align: center;
+  align-items: center;
+}
+.btn-group .btn {
+  width: 8.5rem;
+  height: auto;
+}
+
+.container{
+  margin: 5.2rem;
+  display: block;
+  justify-content: center;
+}
+
+.box {
+  padding: 2rem;
+  margin-top: 6rem;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: #1c1c1c;
+  border-radius: 5px;
+
+    h1{
+        color: #ffff;
+    }
+}
+.container-profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.be-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+
+  a {
+    color: #FFFFFF; 
+    text-decoration: none;  
+  }
+  a:hover { 
+    color: #6ac077;
+  }
+}
+
+.profile-box {
+  display: block;
+  background-color: #6ac077;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7); /* เพิ่มเงา */
+  border-collapse: collapse;
+  width: 48%;
+  color: #1c1c1c;
+}
+
+.form-control {
+    text-align: center;
+    width: 280px;
+    display: inline-block;
+}
+
+.container-prof {
+    display: flexbox; /* ใช้ flexbox */
+    justify-content: center; /* จัดเรียงแนวนอนตรงกลาง */
+    align-items: center; /* จัดเรียงแนวตั้งตรงกลาง */
+    height: 100%; /* กำหนดความสูงเป็น 100% เพื่อให้ flexbox ทำงานได้ถูกต้อง */
+}

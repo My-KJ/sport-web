@@ -1,0 +1,14 @@
+ /* กำหนดลักษณะของปุ่ม */
+ .toggle-button {
+    background-color: #4CAF50; /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    padding: 10px 20px; /* ขนาดของปุ่ม */
+    border: none; /* ไม่มีเส้นขอบ */
+    border-radius: 5px; /* ขอบโค้ง */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นรูปแบบแตะ */
+}
+
+/* ลักษณะของปุ่มเมื่อนำเม้าส์มาวาง */
+.toggle-button:hover {
+    background-color: #45a049; /* สีพื้นหลังเมื่อชี้เข้าไป */
+}
