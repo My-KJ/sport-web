@@ -98,24 +98,61 @@ $sql_product = "SELECT * FROM `products`";
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-?>
-  <div class="col-md-3">   
-    <div class="card mb-3">
-      <input type="hidden" name="id_pro" value="<?php echo $row['id_pro']; ?>">
-      <img src="<?php echo $row['img'] ?>" class="card-img-top" alt="" style="width: auto; height: 300px;">
-      <div class="card-body">
-        <h5 class="card-title"><b> <?php echo $row['brand'] ?> </b></h5>
-        <p class="card-text"> <?php echo $row['name'] ?> </p>
-        <div class="btn-card">
-        <a href="product-info.php?id=<?php echo $row['id_pro'] ?>" style="width:auto;" class="btn btn-success">รายละเอียดสินค้า</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <?php
-      }
-    }
-?>
+                  if ($row['status'] === 'Out of Stock') {
+                    ?>
+                    <!-- สินค้าหมด -->
+                    <div class="col-md-3">   
+                        <div class="card mb-3">
+                            <input type="hidden" name="id" value="<?php echo $row['id_pro']; ?>">
+                            <img src="<?php echo $row['img'] ?>" class="card-img-top" alt="" style="width: auto; height: 300px;">
+                            <div class="card-body">
+                                <h5 class="card-title"><b> <?php echo $row['brand'] ?> </b></h5>
+                                <p class="card-text"> <?php echo $row['name'] ?> </p>
+                                <div class="btn-card">
+                                    <button class="btn btn-danger" disabled>สินค้าหมด</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                  } elseif ($row['status'] === 'Not Sale') {
+                  ?>
+                  <!-- สินค้าไม่ขาย -->
+                  <div class="col-md-3">   
+                      <div class="card mb-3">
+                          <input type="hidden" name="id" value="<?php echo $row['id_pro']; ?>">
+                          <img src="<?php echo $row['img'] ?>" class="card-img-top" alt="" style="width: auto; height: 300px;">
+                          <div class="card-body">
+                              <h5 class="card-title"><b> <?php echo $row['brand'] ?> </b></h5>
+                              <p class="card-text"> <?php echo $row['name'] ?> </p>
+                              <div class="btn-card">
+                                  <button class="btn btn-secondary" disabled>สินค้าไม่ขาย</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <?php
+              } else {
+                  ?>
+                  <!-- สินค้าพร้อมจำหน่าย -->
+                  <div class="col-md-3">   
+                      <div class="card mb-3">
+                          <input type="hidden" name="id" value="<?php echo $row['id_pro']; ?>">
+                          <img src="<?php echo $row['img'] ?>" class="card-img-top" alt="" style="width: auto; height: 300px;">
+                          <div class="card-body">
+                              <h5 class="card-title"><b> <?php echo $row['brand'] ?> </b></h5>
+                              <p class="card-text"> <?php echo $row['name'] ?> </p>
+                              <div class="btn-card">
+                                  <a href="product-info.php?id=<?php echo $row['id_pro'] ?>" style="width:auto;" class="btn btn-success">รายละเอียดสินค้า</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <?php
+              }
+          }
+        }
+        ?>
 
   </div>
 </div>

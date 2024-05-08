@@ -80,9 +80,14 @@
                             <label for="price" class="form-label">ราคา</label>
                             <input type="number" class="form-control" id="price" name="price" min="0" max="999999" placeholder="Price" required>
                         </div>
-                        <div class="col-md-3">
-                            <label for="stock" class="form-label">Stock</label>
-                            <input type="number" class="form-control" id="stock" name="stock" min="0" max="999999" placeholder="Stock" required>
+                        <div class="col-md-5">
+                            <label for="status" class="form-label">สถานะสินค้า</label>
+                            <select class="form-select" id="status" name="status" required>
+                                    <option value="" selected disabled>เลือกสถานะสินค้า</option>
+                                    <option value="Out of Stock">สินค้าหมด</option>
+                                    <option value="Not Sale">สินค้าเลิกขาย</option>
+                                    <option value="Ready to Sale">พร้อมขาย</option>
+                                </select>
                         </div>
 
                         <div class="col-md-3">
@@ -107,11 +112,11 @@
                                 <select class="form-select" id="brnd" name="brnd" required>
                                     <option value="" selected disabled>เลือกแบรนด์สินค้า</option>
                                     <option value="WARRIX">WARRIX</option>
-                                    <option value="GRAND">Grand Sport</option>
+                                    <option value="GRAND SPROT">Grand Sport</option>
                                     <option value="IMANE">IMANE</option>
                                     <option value="FBT">FBT</option>
-                                    <option value="EGO">EGO Sport</option>
-                                    <option value="H3">H3 Sport</option>
+                                    <option value="EGO SPORT">EGO Sport</option>
+                                    <option value="H3 SPORT">H3 Sport</option>
                                     <option value="CADENZA">CADENZA Sport</option>
                                 </select>
                             </div>
@@ -123,6 +128,7 @@
                                     <option value="Shirt">เสื้อ</option>
                                     <option value="Pant">กางเกง</option>
                                     <option value="Sock">ถุงเท้า</option>
+                                    <option value="Jipata">อุปกรณ์อื่นๆ</option>
                                 </select>
                             </div>
                         </div>

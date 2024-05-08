@@ -85,15 +85,20 @@
                             <label for="size" class="form-label" style="display: flex;">Size <p style="font-size: 12px;"> *เช่น ไซส์ 2XL</p></label>
                             <input type="text" class="form-control" id="size" name="size_2xl" placeholder="เช่น ไซส์ 2XL" value="<?php echo $row['size_2xl'] ?>" required>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-5">
                             <label for="price" class="form-label">ราคา</label>
                             <input type="number" class="form-control" id="price" name="price" min="0" max="999999" placeholder="Price" value="<?php echo $row['price'] ?>" required>
                         </div>
-                        <div class="col-md-3">
-                            <label for="stock" class="form-label">Stock</label>
-                            <input type="number" class="form-control" id="stock" name="stock" min="0" max="999999" placeholder="Stock" value="<?php echo $row['stock'] ?>" required>
+                        <div class="col-md-5">
+                            <label for="status" class="form-label">สถานะสินค้า</label>
+                            <select class="form-select" id="status" name="status" required>
+                                    <option value="" selected disabled><?php echo $row['status'] ?></option>
+                                    <option value="Out of Stock">สินค้าหมด</option>
+                                    <option value="Not Sale">สินค้าเลิกขาย</option>
+                                    <option value="Ready to Sale">พร้อมขาย</option>
+                                </select>
                         </div>
-                       
+
                         <div class="col-md-3">
                             <label for="type" class="form-label">ประเภทสินค้า</label>
                             <select class="form-select" id="type" name="type" required>
@@ -116,11 +121,11 @@
                                 <select class="form-select" id="brnd" name="brnd" required>
                                     <option value="" selected disabled><?php echo $row['brand'] ?></option>
                                     <option value="WARRIX">WARRIX</option>
-                                    <option value="GRAND">Grand Sport</option>
+                                    <option value="GRAND SPROT">Grand Sport</option>
                                     <option value="IMANE">IMANE</option>
                                     <option value="FBT">FBT</option>
-                                    <option value="EGO">EGO Sport</option>
-                                    <option value="H3">H3 Sport</option>
+                                    <option value="EGO SPORT">EGO Sport</option>
+                                    <option value="H3 SPORT">H3 Sport</option>
                                     <option value="CADENZA">CADENZA Sport</option>
                                 </select>
                             </div>
@@ -132,14 +137,17 @@
                                     <option value="Shirt">เสื้อ</option>
                                     <option value="Pant">กางเกง</option>
                                     <option value="Sock">ถุงเท้า</option>
+                                    <option value="Jipata">อุปกรณ์อื่นๆ</option>
                                 </select>
                             </div>
+                        </div>
+                            
                         <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>" >
                         <div class="col-12" style="margin: 16px;">
                             <button type="submit" name="submit" class="btn btn-primary d-block mx-auto">Accept</button>
                         </div>
                     </form>
-                    <a href="crud.php">Previous</a>
+                    <a href="crud.php" class="btn btn-warning">Previous</a>
                 </div>  
             </div>
         </div>

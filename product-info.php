@@ -58,11 +58,7 @@ if (!isset($_SESSION['username'])) {
         </div>
         <div class="product-details">
             <h1><?php echo $row['name']; ?></h1>
-            <?php if ($row['stock'] == 0): ?>
-                <h5 class="price">ราคา : สินค้าหมดชั่วคราว</h5>
-            <?php else: ?>
                 <h5 class="price">ราคา : <?php echo $row['price']; ?> บาท</h5>
-            <?php endif; ?>
             <?php if ($row['size_s'] > 0 || $row['size_m'] > 0 || $row['size_l'] > 0 || $row['size_xl'] > 0 || $row['size_2xl'] > 0) { ?>
                 <div class="list-size mb-2">
                     <h5>Size</h5>
@@ -85,15 +81,12 @@ if (!isset($_SESSION['username'])) {
                     </select>
                 </div>
             <?php } ?>
-
-            <?php if ($row['stock'] != 0): ?>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">Quantity</span>
                     </div>
-                    <input type="number" class="form-control" name="quantity" value="1" min="1" max="<?php echo $row['stock'] ?>" required>
+                    <input type="number" class="form-control" name="quantity" value="1" min="1" max="100" required>
                 </div>
-            <?php endif; ?>
             <button class="addtocart" type="submit"> เพิ่มสินค้าลงตะกร้า </button>
     </div>
     </form>

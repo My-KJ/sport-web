@@ -17,6 +17,7 @@ if (isset($_POST['submit'])) {
                 $sql = "UPDATE products SET 
                     name = '".htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8')."',
                     price = '".$_POST['price']."', 
+                    status = '".$_POST['status']."',
                     descript = '".$_POST['Dcript']."',                
                     category = '".$_POST['CGR']."', 
                     type = '".htmlspecialchars($_POST['type'], ENT_QUOTES, 'UTF-8')."',
@@ -26,7 +27,6 @@ if (isset($_POST['submit'])) {
                     size_l = '".htmlspecialchars($_POST['size_l'], ENT_QUOTES, 'UTF-8')."',
                     size_xl = '".htmlspecialchars($_POST['size_xl'], ENT_QUOTES, 'UTF-8')."',
                     size_2xl = '".htmlspecialchars($_POST['size_2xl'], ENT_QUOTES, 'UTF-8')."',
-                    stock = '".$_POST['stock']."',
                     img = '".$fullPath."',
                     updated_date = '".date("Y-m-d H:i:s")."'
                     WHERE id_pro = '".mysqli_real_escape_string($conn, $_POST['id'])."' ";
@@ -48,7 +48,8 @@ if (isset($_POST['submit'])) {
     } else {
         // ถ้าไม่มีการอัปโหลดรูปภาพใหม่ ก็อัปเดตข้อมูลปกติ
         $sql = "UPDATE products SET 
-            price = '".$_POST['price']."', 
+            price = '".$_POST['price']."',
+             status = '".$_POST['status']."',
             descript = '".$_POST['Dcript']."',                
             category = '".$_POST['CGR']."', 
             type = '".htmlspecialchars($_POST['type'], ENT_QUOTES, 'UTF-8')."',
@@ -58,7 +59,6 @@ if (isset($_POST['submit'])) {
             size_l = '".htmlspecialchars($_POST['size_l'], ENT_QUOTES, 'UTF-8')."',
             size_xl = '".htmlspecialchars($_POST['size_xl'], ENT_QUOTES, 'UTF-8')."',
             size_2xl = '".htmlspecialchars($_POST['size_2xl'], ENT_QUOTES, 'UTF-8')."',
-            stock = '".$_POST['stock']."',
             updated_date = '".date("Y-m-d H:i:s")."'
             WHERE id_pro = '".mysqli_real_escape_string($conn, $_POST['id'])."' ";
 

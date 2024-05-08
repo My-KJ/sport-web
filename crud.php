@@ -51,8 +51,8 @@
                 <th>ชื่อ</th>
                 <th>รูปภาพ</th>
                 <th style="text-align: center;">ราคา</th>
-                <th style="text-align: center;">จำนวนสต๊อกสินค้า (ชิ้น)</th>
                 <th style="text-align: center;">แบรนด์</th>
+                <th style="text-align: center;">สถานะสินค้า</th>
                 <th style="text-align: center;">Action</th>
             </tr>
         </thead>
@@ -71,8 +71,8 @@
                         ?> 
                     </td>
                     <td style="text-align: right;"> <?php echo $row["price"] ?> บาท</td>
-                    <td style="text-align: center;"> <?php echo $row['stock'] ?> </td>
                     <td style="text-align: center;"> <?php echo $row['brand'] ?> </td>
+                    <td style="text-align: center;"> <?php echo $row['status'] ?> </td>
                     <td style="text-align: center;">
                         <div class="btn-group">
                             <button class="btn btn-primary" 

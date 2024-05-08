@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
     // Check if password matches the confirm password
     if ($password !== $confirm_password) {
         echo "<script>alert('Passwords do not match.');
-        window.location.href = 'user-form-created.php';</script>";
+        window.location.href = 'form-create-emp.php';</script>";
         exit;
     }
     }
@@ -35,7 +35,7 @@ if ($usernameExists > 0) {
     // Username already exists, show an error message
     echo '<script> 
         alert("Username already exists. Please choose a different username.");
-        window.location.href = "user-form-created.php";
+        window.location.href = "form-create-emp.php";
         </script>';
         
 } else {

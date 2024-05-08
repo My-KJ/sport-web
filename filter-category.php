@@ -13,10 +13,10 @@ if (!isset($_SESSION['username'])) {
 }
 
 // ตรวจสอบว่ามีการส่งค่า brand ผ่าน URL หรือไม่
-if(isset($_GET['brand'])) {
-    $selected_brand = $_GET['brand'];
+if(isset($_GET['category'])) {
+    $selected_category = $_GET['category'];
     // คำสั่ง SQL เพื่อดึงข้อมูลสินค้าตามแบรนด์ที่เลือก
-    $sql_product = "SELECT * FROM `products` WHERE `brand` = '$selected_brand'";
+    $sql_product = "SELECT * FROM `products` WHERE `category` = '$selected_category'";
 } else {
     // ถ้าไม่ได้รับค่า brand ให้แสดงสินค้าทั้งหมด
     $sql_product = "SELECT * FROM `products`";
@@ -47,7 +47,7 @@ $result = $conn->query($sql_product);
                 <img src="asset/BANGPHRA SPORT PNG 3.png" alt="" width="150px" height="auto">
             </a>
             <div class="btn-group">
-                <a href="product.php" type="button" class="btn">ย้อนกลับ</a>
+                <a href="index-c.php" type="button" class="btn">ย้อนกลับ</a>
                 <a href="profile-c.php" type="button" class="btn">โปรไฟล์</a>
                 <a href="cart.php" type="button" class="btn">ตะกร้าสินค้า</a>
                 <a href="order-view.php" type="button" class="btn">คำสั่งซื้อ</a>
@@ -63,7 +63,7 @@ $result = $conn->query($sql_product);
         <div class="container" style="margin-top: 15px;">
 
             <div class="row">
-                <h1>สินค้าจาก <b><?php echo $selected_brand ?></b></h1>
+                <h1><b><?php echo $selected_category ?></b></h1>
 
                 <?php
                 if ($result->num_rows > 0) {

@@ -43,26 +43,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Prepare arrays to store product details
     $products_array = array();
     $price_per_unit_array = array();
-
-    // Prepare SQL statement to update stock in products table for each product in the cart
+    
     foreach ($_SESSION['cart'] as $product) {
     $product_id = $product['id'];
     $product_quantity = $product['quantity'];
     $product_price = $product['price'];
     $product_name = $product['name'];
 
-    // Retrieve current stock of the product
-    $sql_current_stock = "SELECT stock FROM products WHERE id_pro = '$product_id'";
-    $result_current_stock = mysqli_query($conn, $sql_current_stock);
-    $row_current_stock = mysqli_fetch_assoc($result_current_stock);
-    $current_stock = $row_current_stock['stock'];
-
-    // Calculate new stock after deduction
-    $new_stock = $current_stock - $product_quantity;
-
-    // Update stock in products table
-    $sql_update_stock = "UPDATE products SET stock = '$new_stock' WHERE id_pro = '$product_id'";
-    mysqli_query($conn, $sql_update_stock);
 
     // Add product details to arrays
     $products_array[] = $product_name . " (" . $product_quantity . " ชิ้น)";

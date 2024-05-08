@@ -1,96 +1,90 @@
-<?php
-require_once('connect.php');
-session_start();
+<?php 
 
-// Check if user is logged in
-if (!isset($_SESSION['username'])) {
-    echo "<script>
-    alert('Please login');
-    window.location.href='index.php';
-    </script>";
-    exit();
-}
-?>     
-
+    require_once('connect.php');
+    session_start();
+   
+    // ตรวจสอบว่ามีการล็อกอินแล้วหรือไม่
+    if (!isset($_SESSION['username'])) {
+        // หากยังไม่ได้ล็อกอิน ให้ redirect ไปยังหน้า index.php
+        echo "<script>
+        alert('Please! login');
+        window.location.href='index.php';
+        </script>";
+        exit(); // จบการทำงานของสคริปต์ที่นี่
+      }
+?> 
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/update-pro.css">
-    <title>Add Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add USER Page </title>
+    <!-- favicons -->
+    <link rel="shortcut icon" type="image/x-icon" href="icon.ico">
+    <!-- Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .flex-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #F5F8FF;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar fixed-top">
-        <div class="container-fluid">
-        <?php if (!isset($_SESSION['username']) || $_SESSION['type'] === 'admin') : ?>
-            <a class="navbar-brand" href="index-a.php">
-                <img src="asset/BANGPHRA SPORT PNG 3.png" alt="" width="150px" height="auto">
-            </a>
-        <?php else: ?>
-            <a class="navbar-brand" href="index-e.php">
-                <img src="asset/BANGPHRA SPORT PNG 3.png" alt="" width="150px" height="auto">
-            </a>
-        <?php endif; ?>
-            
-            <div class="btn-group">
-                <a href="logout.php" type="button" class="btn">ออกจากระบบ</a>
-                <a href="employee-info.php" type="button" class="btn">ย้อนกลับ</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar -->
-
-    <!-- Body -->
+<div class="flex-container">
     <div class="container">
-        <div class="box">
-            <h1>พื้นที่โฆษณา</h1>
-        </div>
-        <h1><b> Add Profile </b></h1>
-        <div class="container-profile">
-            <div class="profile-box">
-                <div class="be-box">
-                    <h5> สร้างข้อมูลสพนักงาน </h5>
-                </div>
-                <hr>
-                <form action="add-emp.php" method="post">
-                    <p> ชื่อ : 
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Input Your Name" value="" required>
-                    </p>
-                    <p> ชื่อผู้ใช้งาน : 
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Input Your username" value="" required>
-                    </p>
-                    <p> รหัสผ่าน(Password) : 
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Input Your Password" required>
-                    </p>
-                    <p> ยืนยันรหัสผ่านอีกครั้ง : 
-                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password" required>
-                    </p>
-                    <p> E-Mail : 
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Input Your Email" value="" required>
-                    </p>
-                    <p> เบอร์โทรศัพท์ : 
-                        <input type="text" class="form-control" id="tel" name="tel" placeholder="Input Your Telephone Number" value="" required>
-                    </p>
+        <div class="shadow rounded p-5 bg-body h-100">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <h1 class="mb-5"> เพิ่มข้อมูลพนักงาน </h1>
+                    <form class="row gy-4" action="add-emp.php" method="POST">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">ชื่อ</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="col-md-7">
+                            <label for="username" class="form-label" style="display: flex;">USERNAME</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Input username" required>
+                        </div>
+                        <br>
+                        <div class="col-md-7">
+                            <label for="password" class="form-label" style="display: flex;">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Input Password" required>
+                        </div>
+                        <div class="col-md-7">
+                            <label for="password" class="form-label" style="display: flex;">Password confirm</label>
+                            <input type="password" class="form-control" id="password" name="confirm_password" placeholder="Input Password" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="tel" class="form-label">เบอร์โทรศัพท์</label>
+                            <input type="text" class="form-control" id="tel" name="tel" placeholder="Input Tel No." required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">E-Mail</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Input E-Mail" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" name="add" placeholder="Input Address" required>
+                        </div>
+                        <div class="col-12" style="margin: 16px;">
+                            <button type="submit" name="submit" class="btn btn-primary d-block mx-auto">Confirm</button>
+                        </div>
+                    </form>
+                    <a class="btn btn-warning" href="crud.php">ย้อนกลับ</a>
+                </div>  
             </div>
-            <div class="profile-box">
-                <div class="be-box">
-                    <h5> ที่อยู่ </h5>
-                </div>
-                <hr>
-                <p> ที่อยู่ : <input type="text" class="form-control" id="add" name="add" placeholder="Input Your Address" value="" required ></p>
-                <div class="container-prof">
-                    <button type="submit" name="submit" class="btn btn-dark"> ยืนยัน </button>
-                </div>
-            </div>
-            </form>
         </div>
-    </div>  
-    <!-- Body -->
+        
+    </div>
+</div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

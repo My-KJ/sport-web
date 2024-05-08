@@ -82,25 +82,25 @@
 
   <div class="row">
     <div class="col p-3">
-      <a href="#" style="width:auto;">
+      <a href="filter-category.php?category=Tools" style="width:auto;">
       <img src="asset/show.jpg" alt="" width="35%">
       </a>
       <p>อุปกรณ์กีฬา</p>
     </div>
     <div class="col p-3">
-      <a href="#" style="width:auto;">
+      <a href="filter-category.php?category=Pant" style="width:auto;">
       <img src="asset/w-plant-fbt.jpg" alt="" width="35%">
       </a>
       <p>กางเกงกีฬา</p>
     </div>
     <div class="col p-3">
-      <a href="#" style="width:auto;">
+      <a href="filter-category.php?category=Shirt" style="width:auto;">
       <img src="asset/w-shirt-liv.jpg" alt="" width="35%">
       </a>
       <p>เสื้อกีฬา</p>
     </div>
     <div class="col p-3">
-      <a href="#" style="width:auto;">
+      <a href="filter-category.php?category=Jipata" style="width:auto;">
       <img src="asset/cupreward.jpg" alt="" width="35%">
       </a>
       <p>อุปกรณ์อื่นๆ</p>

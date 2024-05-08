@@ -95,6 +95,8 @@
                                 <p>E-Mail : <?php echo $row['email'] ?></p>
                                 <p>ตำแหน่ง : <?php echo $row['type'] ?></p>
                                 <p>Status : <?php echo $row['status'] ?></p>
+                                <hr>
+                                <p>ที่อยู่ : <?php echo $row['address'] ?></p>
                                         
                                     </div>
                                     <div class="modal-footer">

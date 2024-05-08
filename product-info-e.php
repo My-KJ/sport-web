@@ -60,11 +60,7 @@ if (!isset($_SESSION['username'])) {
         <img src="<?php echo $row['img']; ?>" alt="Product Image" style="width: 500px;" >
         </div>
         <div class="product-details">
-            <?php if ($row['stock'] == 0): ?>
-                <h5 class="price">ราคา : สินค้าหมดชั่วคราว</h5>
-            <?php else: ?>
                 <h5 class="price">ราคา : <?php echo $row['price']; ?> บาท</h5>
-            <?php endif; ?>
             <?php if ($row['size_s'] > 0 || $row['size_m'] > 0 || $row['size_l'] > 0 || $row['size_xl'] > 0 || $row['size_2xl'] > 0) { ?>
             <div class="btn-size">
                 <h5>Size</h5>

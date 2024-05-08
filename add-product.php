@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     if (in_array($fileType, $allowTypes)) {
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath)) {
             // File upload successful, continue with database insertion
-            $sql = "INSERT INTO `products` (`name`, `descript`, `category`, `type`, `brand`, `price`, `size`, `stock`, `img`, `created_date`, `updated_date`) 
+            $sql = "INSERT INTO `products` (`name`, `descript`, `category`, `type`, `brand`, `price`, `size`, `img`, `created_date`, `updated_date`) 
                 VALUES (
                         '" . htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8') . "',
                         '" . $_POST['descript'] . "',
@@ -22,7 +22,6 @@ if (isset($_POST['submit'])) {
                         '" . $_POST['brand'] . "',
                         '" . $_POST['price'] . "',
                         '" . $_POST['size'] . "',
-                        '" . $_POST['stock'] . "',
                         '" . $targetFilePath . "', 
                         '" . date("Y-m-d H:i:s") . "', 
                         '" . date("Y-m-d H:i:s") . "')";
