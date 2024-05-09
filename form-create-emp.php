@@ -76,7 +76,7 @@
                             <button type="submit" name="submit" class="btn btn-primary d-block mx-auto">Confirm</button>
                         </div>
                     </form>
-                    <a class="btn btn-warning" href="crud.php">ย้อนกลับ</a>
+                    <a class="btn btn-warning" href="employee-info.php">ย้อนกลับ</a>
                 </div>  
             </div>
         </div>
