@@ -62,5 +62,48 @@ body {
         margin: 5px 0;
     }
 
-    
+    /* สีพื้นหลังและขอบของ dropdown */
+.dropdown-menu {
+    background-color: #fff; /* สีพื้นหลัง */
+    border: 1px solid #ddd; /* ขอบ */
+  }
+  
+  /* สีของข้อความใน dropdown */
+  .dropdown-item {
+    color: #333; /* สีข้อความ */
+  }
+  
+  /* สีของข้อความเมื่อ hover ใน dropdown */
+  .dropdown-item:hover {
+    background-color: #f0f0f0; /* สีพื้นหลังเมื่อ hover */
+  }
+  
+  /* ขอบของ dropdown-toggle */
+  .dropdown-toggle {
+    border: 1px solid #ddd; /* ขอบ */
+    color: #333; /* สีข้อความ */
+  }
+  
+  /* ปรับขนาดและสีของ caret (icon ลูกศร) */
+  .dropdown-toggle::after {
+    vertical-align: middle;
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
+    content: "";
+    display: inline-block;
+    margin-left: 0.255em;
+    opacity: 0.5;
+  }
+  
+  /* เมื่อ dropdown เปิดอยู่ */
+  .dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+  }
+  
+  /* เมื่อมีการ hover ที่ dropdown-toggle */
+  .dropdown-toggle:hover {
+    background-color: #f0f0f0; /* สีพื้นหลังเมื่อ hover */
+  }
+  
     

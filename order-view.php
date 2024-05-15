@@ -79,6 +79,7 @@ if ($result_id_cus->num_rows > 0) {
             <p><strong>รหัสการสั่งซื้อ:</strong> <?php  echo $row['id_order']   ?> </p> 
             <p><strong>สินค้า:</strong> <?php  echo $row['product']   ?> </p>
             <p><strong>ราคารวม:</strong> <?php  echo $row['total_price']   ?></p>
+            <p><strong>Tracking NO :</strong> <?php  echo $row['tracking_num']   ?></p>
             <p><strong>สถานะ:</strong> <?php  echo $row['order_status']   ?></p>
 
             <?php

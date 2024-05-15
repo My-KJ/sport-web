@@ -6,7 +6,8 @@ if (isset($_POST['submit'])) {
     
         // ถ้าไม่มีการอัปโหลดรูปภาพใหม่ ก็อัปเดตข้อมูลปกติ
         $sql = "UPDATE orders SET 
-            order_status = '".$_POST['order_status']."'
+            order_status = '".$_POST['order_status']."',
+            tracking_num = '".$_POST['Tnum']."'
             WHERE id_order = '".mysqli_real_escape_string($conn, $_POST['id'])."' ";
 
         if (mysqli_query($conn, $sql)) {

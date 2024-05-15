@@ -97,6 +97,7 @@
                                     <p>สินค้าทั้งหมด : <?php echo $row['product'] ?></p>
                                     <p>ราคารวม: <?php echo $row['total_price'] ?></p>
                                     <p>ที่อยู่จัดส่ง : <?php echo $row['address_ship'] ?></p>
+                                    <p>Tracking NO. : <?php echo $row['tracking_num'] ?></p>
                                     <p>เบอร์ลูกค้า : <?php echo $row['contact'] ?></p>
                                     <?php if ($row['type_payment'] !== "Cash") { ?>
                                         <p>หลักฐานการโอน : 

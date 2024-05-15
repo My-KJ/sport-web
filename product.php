@@ -32,13 +32,20 @@
     <a class="navbar-brand" href="index-c.php">
       <img src="asset/BANGPHRA SPORT PNG 3.png" alt="" width="150px" height="auto">
     </a>
+    <!-- does'nt Using -->
+
+    <!-- <form class="d-flex" action="search.php" method="get">
+      <input class="form-control me-2" type="search" placeholder="Search" name="search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form> -->
+    
     <div class="btn-group">
         <a href="index-c.php" type="button" class="btn">ย้อนกลับ</a>
         <a href="profile-c.php" type="button" class="btn">โปรไฟล์</a>
         <a href="cart.php" type="button" class="btn">ตะกร้าสินค้า</a>
         <a href="order-view.php" type="button" class="btn">คำสั่งซื้อ</a>
         <a href="logout.php" type="button" class="btn">ออกจากระบบ</a>
-        </div>
+    </div>
   </div>
 </nav>
 <!-- Navbar -->

@@ -92,6 +92,10 @@
                                 <?php endif; ?>
                             </select>
                         </div>
+                        <div class="col-md-6">
+                            <label for="Tnum" class="form-label">Tracking Number </label>
+                            <input type="text" class="form-control" id="Tnum" name="Tnum" placeholder="Tracking Number" value="<?php echo $row['tracking_num'] ?>">
+                        </div>
                         <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>" >
                         <div class="col-12" style="margin: 16px;">
                             <button type="submit" name="submit" class="btn btn-primary d-block mx-auto">Accept</button>
