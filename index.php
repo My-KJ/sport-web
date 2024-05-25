@@ -53,10 +53,10 @@
       <span class="reg">ยังไม่เคยสมัครสมาชิก กด<a href="register-form.php">ที่นี่</a></span>
     </div>
 
-    <div class="container" style="background-color:#f1f1f1">
+    <!-- <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">ยกเลิก</button>
       <span class="psw"><a href="#">ลืมรหัสผ่าน</a></span>
-    </div>
+    </div> -->
   </form>
 </div>
 <!-- Login Modal -->

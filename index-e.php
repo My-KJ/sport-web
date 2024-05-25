@@ -22,7 +22,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/index-e.css">
+<link rel="stylesheet" href="css/index-em.css">
     <title>Employee page</title>
 </head>
 <body>
@@ -48,8 +48,7 @@
   <img src="asset/product-e.png" onclick="window.location.href='product-e.php';">
   <img src="asset/wait-sale.png" onclick="window.location.href='order.php';">
   <img src="asset/S-sale.png" onclick="window.location.href='total-sale.php';">
-  <img src="asset/User info.png" onclick="window.location.href='customer-info.php';">
-  
+  <img src="asset/User info.png" onclick="window.location.href='customer-info.php';"> 
 </div>
 <!-- Body -->
 

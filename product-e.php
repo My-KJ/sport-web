@@ -146,7 +146,7 @@ $sql_product = "SELECT * FROM `products`";
                 <div class="col-md-3">   
                     <div class="card mb-3">
                         <input type="hidden" name="id" value="<?php echo $row['id_pro']; ?>">
-                        <img src="<?php echo $row['img'] ?>" class="card-img-top" alt="" style="width: auto; height: 300px;">
+                        <img src="<?php echo $row['img'] ?>" class="card-img-top" alt="" style="width: auto; height: 260px;">
                         <div class="card-body">
                             <h5 class="card-title"><b> <?php echo $row['brand'] ?> </b></h5>
                             <p class="card-text"> <?php echo $row['name'] ?> </p>
